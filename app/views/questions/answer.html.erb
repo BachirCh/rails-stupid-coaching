@@ -1,0 +1,12 @@
+<h1>Questions#answer</h1>
+<p>Find me in app/views/questions/answer.html.erb</p>
+<h2>Your question: <%= params[:question] %></h2>
+<% if params[:question] == "I am going to work" %>
+  <h2 style="color: blue">Great!</h2>
+<% elsif params[:question][-1] == "?" %>
+  <h2>Silly question, get dressed and go to work!</h2>
+<% else %>
+  <h2>I don't care, get dressed and go to work!</h2>
+<% end %>
+<%= link_to "Ask new question", ask_path %>
+
